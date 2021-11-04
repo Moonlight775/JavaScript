@@ -28,4 +28,4 @@
 	let globalName = 'global name';
 	console.log(globalName);
 	
-	
+	// var (don't ever use this!)
