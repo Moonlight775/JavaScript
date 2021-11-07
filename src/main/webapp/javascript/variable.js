@@ -3,7 +3,7 @@
 	// use this for Vanilla Javascript
 	'use strict';
 	
-	// 2. Variable
+	// 2. Variable, rw(read/write)
 	// let (added in Es6)
 	
 	let name = 'ellie';
@@ -41,7 +41,13 @@
 	// name = 4;
 	// let name;
 	
-	// 3. Constants
+	// 3. Constant, r(read only)
+	// use const whenever possible.
+	// only use let if variable needs to change.
+	
+	// Note!
+	// Immutable data types: primitive types, frozen objects (i.e. object.freeze())
+	// Mutable data types: all objects by default are mutable in JS
 	// favor immutable data type always for a few reasons:
 	// - security
 	// - thread safety
@@ -112,14 +118,21 @@
 	// console.log(`value: ${symbol1}, type: ${typeof symbol1}`); // String으로 변환 필요
 	console.log(`value: ${symbol1.description}, type: ${typeof symbol1.description}`);
 	
+	// object, real-life object, data structure
+	const ellie = { name: 'ellie', age: 20};
+	ellie.age = 21;
 	
-	
-	
-	
-	
-	
-	
-	
+	// 5. Dynamic typing: dynamically typed language
+	let text = 'hello';
+	console.log(text.charAt(0)); //h
+	console.log(`value: ${text}, type: ${typeof text}`);
+	text = 1;
+	console.log(`value: ${text}, type: ${typeof text}`);
+	text = '7' + 5;
+	console.log(`value: ${text}, type: ${typeof text}`);
+	text = '8' / '2';
+	console.log(`value: ${text}, type: ${typeof text}`);
+	console.log(text.charAt(0));
 	
 	
 	
