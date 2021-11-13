@@ -46,3 +46,58 @@
 	printValue(moon, 'name');
 	printValue(moon, 'age');
 	
+	// 3. Property value shorthand
+	const person1 = { name: 'bob', age: 2 };
+	const person2 = { name: 'steve', age: 3 };
+	const person3 = { name: 'dave', age: 4 };
+	const person4 = makePerson('moon', 30);
+	const person5 = new Person('moon', 31);
+	console.log(person4);
+	console.log(person5);
+	
+	function makePerson(name, age) {
+		return {
+			name, // key와 value의 이름이 동일하다면 생략가능 
+			age,
+		};
+	}
+	
+	// 4. Constructor Function
+	function Person(name, age) {
+		// this = {};
+		this.name = name;
+		this.age = age;
+		// return this;
+	}
+	
+	// 5. in operator: property existence check (key in obj)
+	console.log('name' in moon);
+	console.log('age' in moon);
+	console.log('random' in moon);
+	console.log(moon.random);
+	
+	// 6. for..in vs for..of
+	// for (kye in obj)
+	console.clear();
+	for (key in ellie) {
+		console.log(key);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
