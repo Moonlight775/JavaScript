@@ -7,3 +7,31 @@
 		const fruitsString = fruits.join(', what ');
 		console.log(fruitsString);
 	}
+	
+	// Q2. make an array out of a string
+	{
+		const fruits = 'apple, kiwi, banana, cherry';
+		const result = fruits.split(',');
+		console.log(result);
+	}
+	
+	// Q3. make this array look like this: [5, 4, 3, 2, 1]
+	{
+		const array = [1, 2, 3, 4, 5]; 
+		const result = array.reverse(); // array도 바뀌게 된다.
+		console.log(result);
+		console.log(array);
+	}
+	
+	// Q4. make new array without the first two elements
+	{
+		const array = [1, 2, 3, 4, 5];
+		const result = array.splice(0, 2);	// 배열 자체를 변환
+		console.log(result); // [1, 2]
+		console.log(array);	 // [3, 4, 5]
+		
+		const array1 = [1, 2, 3, 4, 5];
+		const result1 = array1.slice(2, 5);
+		console.log(result1); // [3, 4, 5]
+		console.log(array);   // [1, 2, 3, 4, 5]
+	}
