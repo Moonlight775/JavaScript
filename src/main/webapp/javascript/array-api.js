@@ -79,7 +79,18 @@
 		console.log(result);
 	}
 	
-	
+	// Q8. check if there is a student with the score lower than 50
+	{
+		const result = students.some((student) => student.score < 50);
+		// score가 50 밑인 게 있으면 true로 return
+		console.log(result);
+		
+		const result2 = students.every((student) => student.score < 50);
+		const result3 = !students.every((student) => student.score >= 50);
+		// 배열의 모든 요소들이 조건을 충족해야지만 true
+		console.log(result2);
+		console.log(result3);
+	}
 	
 	
 	
