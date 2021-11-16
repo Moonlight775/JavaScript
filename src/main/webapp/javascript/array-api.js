@@ -58,16 +58,26 @@
 //		const result = students.find(function(item, index){ // index는 사용하지 않아 생략가능
 //			return item.score === 90;
 //		});
-		const result = students.find((item) => item.score ===90);
+		const result = students.find((student) => student.score ===90);
 		console.log(result);
 	}
 	
 	// Q6. make an array of enrolled students
 	{
-		const result = students.filter((item) => item.enrolled);
+		const result = students.filter((student) => student.enrolled);
 		console.log(result);
 	}
 	
+	// Q7. make an array containing only the students' scores
+	// result should be: [45, 80, 90, 66, 88]
+	{
+//		const result = students.map(function(item){
+//			return item;
+//		})
+		const result = students.map((student) => student.score); 
+		//callback function로 전달되는 인자를 의미없는 item, value 같은 것을 쓰기 보다는 알아보기 쉽게 작성해주는 것이 좋다.
+		console.log(result);
+	}
 	
 	
 	
