@@ -55,13 +55,18 @@
 	
 	// Q5. find a student with the score 90
 	{
-//		const result = students.find(function(item, index){
+//		const result = students.find(function(item, index){ // index는 사용하지 않아 생략가능
 //			return item.score === 90;
 //		});
 		const result = students.find((item) => item.score ===90);
 		console.log(result);
 	}
 	
+	// Q6. make an array of enrolled students
+	{
+		const result = students.filter((item) => item.enrolled);
+		console.log(result);
+	}
 	
 	
 	
