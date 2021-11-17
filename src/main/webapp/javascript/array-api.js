@@ -91,9 +91,19 @@
 		console.log(result2);
 		console.log(result3);
 	}
-	
-	
-	
+	console.clear();
+	// Q9. compute students' average score
+	{
+		const result = students.reduce((prev, curr) => {
+			console.log('-----------');
+			console.log(prev);
+			console.log(curr);
+			return prev + curr.score;
+		}, 0);
+		console.log(result);
+	}
+	// 시작점부터 모든 배열을 돌면서 어떤 값을 누적할 때 사용
+	// reduceRight은 배열의 제일 뒤에서 부터 시작
 	
 	
 	
