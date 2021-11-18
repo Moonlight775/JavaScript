@@ -105,7 +105,15 @@
 	// 시작점부터 모든 배열을 돌면서 어떤 값을 누적할 때 사용
 	// reduceRight은 배열의 제일 뒤에서 부터 시작
 	
-	
+	// Q10. make a string containing all the scores
+	// result should be: '45, 80, 90, 66, 88'
+	{
+		const result = students
+			.map(student => student.score)
+	//		.filter((score) => score >= 50)
+			.join();
+		console.log(result);
+	}
 	
 	
 	
