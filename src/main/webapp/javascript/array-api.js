@@ -115,7 +115,17 @@
 		console.log(result);
 	}
 	
-	
+	// Bonus! do 010 sorted in ascending order
+	// result should be: '45, 66, 80, 88, 90'
+	{
+		const result = students
+			.map(student => student.score)
+			.sort((a, b) => a - b) // score가 낮은 것 부터 큰 순서대로
+	//		.sort((a, b) => b - a) // score가 큰 것 부터 작은 순서대로
+			.join();
+			console.log(result);
+	}	
+
 	
 	
 	
