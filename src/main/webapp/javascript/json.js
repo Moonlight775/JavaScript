@@ -52,22 +52,19 @@
 	console.log(obj1.birthDate.getDate());
 	
 	
+	// JSON과 관련된 유용한 웹사이트
 	
+	// JSON Diff
+	// 첫 번째로 받아온 데이터와 두 번째로 받아온 데이터가 무엇이 다른지 모를 때 확인 가능
+	// 디버깅하기 좋음
 	
+	// JSON Beautifier
+	// 서버에서 받아온 JSON을 복사해서 붙여넣으면 포멧이 망가지는 경우 발생
+	// 간단히 복구 가능
 	
+	// JSON Parser
+	// JSON type을 object 형태로 확인해 보고 싶을 때
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	// JSON Validator
+	// 유효한 JSON 데이터인지 확인 가능
 	
