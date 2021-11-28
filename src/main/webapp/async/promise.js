@@ -40,3 +40,86 @@
 			});
 		})
 		.then(num => console.log(num));
+		
+	// 4. Error Handling
+	/*const getHen = () =>
+		new Promise((resolve, reject) => {
+			setTimeout(() => resolve('chicken'), 1000);
+		});
+	const getEgg = hen =>
+		new Promise((resolve, reject) => {
+			setTimeout(() => resolve(`${hen} => egg`), 1000);
+		});
+	const cook = egg =>
+		new Promise((resolve, reject) => {
+			setTimeout(() => resolve(`${egg} => fried egg`), 1000);
+		});
+	
+	getHen()
+		.then(hen => getEgg(hen))
+		.then(egg => cook(egg))
+		.then(meal => console.log(meal));*/
+		
+	/*getHen()
+		.then(getEgg)
+		.then(cook)
+		.then(console.log);*/
+		
+	
+	const getHen = function() {
+		return new Promise(function(resolve, reject) {
+			setTimeout(function() {
+				resolve('chicken')
+			},1000);
+		});
+	};
+	const getEgg = function(hen){
+		return new Promise(function(resolve, reject) {
+			setTimeout(function() {
+				reject(new Error(`error! ${hen} => egg`))
+			},1000);
+		});
+	};
+	const cook = function(egg){
+		return new Promise(function(resolve, reject) {
+			setTimeout(function() {
+				resolve(`${egg} => fried egg`)
+			},1000);
+		});
+	};
+	
+	getHen()
+		.then(function(hen){
+			return getEgg(hen)
+		})
+		.catch(function(error){
+			return 'bread';
+		})
+		.then(function(egg){
+			return cook(egg)
+		})
+		.then(function(meal) {
+			console.log(meal)
+		})
+		.catch(function(error) {
+			console.log(error)
+		})
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
