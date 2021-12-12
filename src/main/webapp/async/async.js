@@ -51,14 +51,26 @@
     // }
 
     async function pickFruits() {
-        const apple= await getApple();
-        const banana = await getBanana();
+        const applePromise = getApple();
+        const bananaPromise = getBanana();
+        const apple= await applePromise;
+        const banana = await bananaPromise;
         return `${apple} + ${banana}`;
     }
 
     pickFruits().then(console.log);
 
+    // 3. useful Promise APIs
+    function pickAllFruits() {
+        return Promise.all([getApple(), getBanana()])
+            .then(fruits => fruits.join(' + '));
+    }
+    pickAllFruits().then(console.log);
 
+    function pickOnlyOne() {
+        return Promise.race([getApple(), getBanana()]); // 배열에 전달된 Promise 중에서 가장 먼저 값을 return 하는 것만 전달 됨
+    }
+    pickOnlyOne().then(console.log);
 
 
 
