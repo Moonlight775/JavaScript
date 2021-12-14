@@ -20,4 +20,9 @@
         console.log(result);
     }
 
-    callSomething(add);
+    //callSomething(add);
+
+    const addFun = add; // addFun이라는 상수변수에 add라는 함수의 이름만 할당하면 addFun은 함수 자체만 가리키고 있다.
+    console.log(addFun);
+    addFun(1, 2);   // 함수 호출
+
